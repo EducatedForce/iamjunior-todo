@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #18afed;
+  color: #fdfcfa;
+  font-size: 1.3rem;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.04);
+  }
+}

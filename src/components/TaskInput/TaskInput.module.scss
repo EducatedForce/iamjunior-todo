@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & input {
+    width: 20rem;
+    height: 2rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1rem;
+  }
+}
