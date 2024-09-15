@@ -4,6 +4,7 @@ import {TaskProps} from "../../types.ts";
 
 import CircleLogo from "../CircleLogo/CircleLogo.tsx";
 import {generateId} from "../../lib/generateId.ts";
+import {getLocalStorageTasks} from "../../lib/getLocalStorageTasks.ts";
 
 const TaskInput = ({setTasks}: {
   setTasks: Dispatch<SetStateAction<TaskProps[]>>
@@ -15,14 +16,19 @@ const TaskInput = ({setTasks}: {
   };
 
   const clickHandler = () => {
+    const storedTasks: TaskProps[] = getLocalStorageTasks()
+
     if (inputText) {
       const newTask: TaskProps = {
         id: generateId(),
         name: inputText,
-        completed: false,
+        status: "open",
       };
       setTasks((prevState) => [...prevState, newTask]);
-      setInputText("")
+      storedTasks.push(newTask);
+
+      localStorage.setItem("tasksIAJ", JSON.stringify(storedTasks));
+      setInputText("");
     }
   };
 

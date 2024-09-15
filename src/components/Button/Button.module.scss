@@ -1,0 +1,12 @@
+.button {
+  border: 1px solid #18afed;
+  background-color: #18afed;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fdfcfa;
+  &:hover {
+    filter: brightness(1.04);
+  }
+}

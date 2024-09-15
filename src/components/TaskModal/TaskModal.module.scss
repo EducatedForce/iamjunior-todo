@@ -1,0 +1,22 @@
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  max-width: 30rem;
+  padding: 2rem;
+  height: 50%;
+  top: 4rem;
+  left: 50%;
+  transform: translate(-45%, 0);
+  background-color: #fdfcfa;
+  border-radius: 1rem;
+}
+
